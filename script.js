@@ -19,6 +19,7 @@ diceEl.className = "hidden"
 const scores = [0,0]
 let currentScore = 0
 let activePlayer = 0
+let playing = true
 
 const swtichPlayer = function() {
      document.getElementById(`current--${activePlayer}`).textContent = 0;
@@ -52,9 +53,20 @@ btnRoll.addEventListener("click", () => {
 btnHold.addEventListener("click", function() {
     // 1 add currrent score to active player score
     scores[activePlayer] += currentScore
-    document.getElementById(`current--${activePlayer}`).textContent = scores[activePlayer]
+    document.getElementById(`score--${activePlayer}`).textContent = scores[activePlayer]
     // 2 check if player's score is >=100
+    if(scores[activePlayer] >=100) {
+document
+  .querySelector(`player--${activePlayer}`)
+  .classList.add('player--winner');
+document
+  .querySelector(`player--${activePlayer}`)
+  .classList.remove('player--winner');
+    } else {
+    swtichPlayer();
+    }
+    
     //  Finish the game
     // Swtich the next player
-    swtichPlayer()
+
 })
