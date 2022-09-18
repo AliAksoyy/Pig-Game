@@ -37,6 +37,10 @@ btnRoll.addEventListener("click", () => {
         // Swtich player
           document.getElementById(`current--${activePlayer}`).textContent = 0
                   activePlayer = activePlayer === 0 ? 1 : 0;
-        currentScore = 0
+        currentScore = 0;
+        playerEl0.classList.toggle("player---active")
+        playerEl1.classList.toggle("player---active")
+
+
     }
 })
