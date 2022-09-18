@@ -19,6 +19,14 @@ diceEl.className = "hidden"
 const scores = [0,0]
 let currentScore = 0
 let activePlayer = 0
+
+const swtichPlayer = function() {
+     document.getElementById(`current--${activePlayer}`).textContent = 0;
+     activePlayer = activePlayer === 0 ? 1 : 0;
+     currentScore = 0;
+     playerEl0.classList.toggle('player---active');
+     playerEl1.classList.toggle('player---active');
+}
 // Rolling dice functionality
 btnRoll.addEventListener("click", () => {
     // 1 Generating a random dice roll
@@ -35,12 +43,18 @@ btnRoll.addEventListener("click", () => {
 
     } else {
         // Swtich player
-          document.getElementById(`current--${activePlayer}`).textContent = 0
-                  activePlayer = activePlayer === 0 ? 1 : 0;
-        currentScore = 0;
-        playerEl0.classList.toggle("player---active")
-        playerEl1.classList.toggle("player---active")
+          swtichPlayer()
 
 
     }
+})
+
+btnHold.addEventListener("click", function() {
+    // 1 add currrent score to active player score
+    scores[activePlayer] += currentScore
+    document.getElementById(`current--${activePlayer}`).textContent = scores[activePlayer]
+    // 2 check if player's score is >=100
+    //  Finish the game
+    // Swtich the next player
+    swtichPlayer()
 })
