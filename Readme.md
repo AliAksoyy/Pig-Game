@@ -1,4 +1,4 @@
-<h1 align="center">Modal-Window</h1>
+<h1 align="center">Pig-Game</h1>
 
 <h3>Overview</h3>
 👨‍💻 In this project I mastered division and DOM skills. I used mainly HTML, CSS and JS (DOM Manipulation). You can see visual demo of the website below. The objective is to build out this real-like webpage and make it looking as professional as possible..
@@ -7,14 +7,14 @@
 ## ✨ Demo
 
  <p align="center">
-  <img width="700" align="center" src="./image/ezgif.com-gif-maker.gif" alt="demo"/>   
+  <img width="700" align="center" src="./ezgif.com-gif-maker.gif" alt="demo"/>   
 </p>
 
 <!-- ![Alt text](https://giphy.com/peekasso)  -->
 
 <hr>
 
-[📍click here to see page](https://aliaksoyy.github.io/Modal-Window.js/)
+[📍click here to see page](https://aliaksoyy.github.io/Pig-Game/)
 
 <!-- ------------------------------------------------------ -->
 
@@ -23,7 +23,7 @@
 ```
 To Do List(folder)
 |----readme.md
-|----image                        
+|----images                        
 |----solution
         |----index.html  
         |----style.css 
@@ -62,7 +62,7 @@ To Do List(folder)
 <hr>
 <h3>How to Use the Project</h3>
 <span>First download a code editor </span>
-<br><span>Second open the files : </span><a href='https://aliaksoyy.github.io/Modal-Window.js/'>My Docs</a>
+<br><span>Second open the files : </span><a href='https://aliaksoyy.github.io/Pig-Game/'>My Docs</a>
 <br><span>You can use this tutorial : </span><a href='https://www.youtube.com/watch?v=fJEbVCrEMSE'>VS Code tutorial</a>
 
 <!-- ------------------------------------------------------------------------- -->
