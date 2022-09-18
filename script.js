@@ -1,5 +1,7 @@
 'use strict';
 // Selecting Elements
+const playerEl0 = document.querySelector(".player--0")
+const playerEl1 = document.querySelector(".player--1")
 const score0El = document.querySelector("#score--0")
 const score1El = document.querySelector("#score--1")
 const diceEl = document.querySelector(".dice")
@@ -14,8 +16,9 @@ const currentScore1 = document.querySelector("#current--1")
 score0El.textContent = 0
 score1El.textContent = 0
 diceEl.className = "hidden"
-
+const scores = [0,0]
 let currentScore = 0
+let activePlayer = 0
 // Rolling dice functionality
 btnRoll.addEventListener("click", () => {
     // 1 Generating a random dice roll
@@ -28,9 +31,12 @@ btnRoll.addEventListener("click", () => {
     if(dice !==1) {
         // Add dice to current score
         currentScore +=dice
-        currentScore0.textContent = currentScore
+        document.getElementById(`current--${activePlayer}`).textContent = currentScore
 
     } else {
         // Swtich player
+          document.getElementById(`current--${activePlayer}`).textContent = 0
+                  activePlayer = activePlayer === 0 ? 1 : 0;
+        currentScore = 0
     }
 })
